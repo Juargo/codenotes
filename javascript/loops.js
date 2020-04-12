@@ -41,3 +41,34 @@ var conimpuestos = orders.map(v=>v*1.19)
 var highValue=orders.filter(v=>v>100)
 
 console.log(`Better syntax Total: ${total} Con Impuestos:${conimpuestos}  Valores Mayores a 100: ${highValue}`)
+
+
+
+
+//######### Test loops ##########
+const mil=1000000;
+const arr= Array(mil)
+
+console.time('for')
+
+for(let i=0;i<mil;i++){}
+
+console.timeEnd('for')
+
+console.time('of')
+
+for (const v of arr){}
+
+console.timeEnd('of')
+
+console.time('foreach')
+
+arr.forEach(element => null);
+
+console.timeEnd('foreach')
+
+console.time('map')
+
+arr.map(v=>null)
+
+console.timeEnd('map')
