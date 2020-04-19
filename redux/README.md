@@ -1,0 +1,1 @@
+Para mantener consistencia de los datos en las aplicaciones web de una sola página

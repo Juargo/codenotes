@@ -27,7 +27,7 @@ console.log(`Bad syntax Total: ${total} Con Impuestos:${conimpuestos}  Valores M
 // array.reduce(function(total, currentValue))
 //total	Required. The initialValue, or the previously returned value of the function
 //currentValue	Required. The value of the current element
-var total = orders.reduce((acc,cur)=>acc+cur)
+var total = orders.reduce((acc,cur)=>acc+cur) 
 
 //Map
 //array.map(function(currentValue))
