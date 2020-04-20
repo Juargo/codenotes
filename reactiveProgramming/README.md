@@ -6,9 +6,13 @@ reactive programming
 
 https://www.youtube.com/watch?v=49dMGC1hM1o
 
+
+![reactive](./images/reactiveprograming.PNG )
+
 effect: Como mis módulos afectan a los demás módulos
 
 Reactive Extension
+API para programación asincrónica con flujos observables
 ReactiveX is a combination of the best ideas from
 the Observer pattern: Observador es un patrón de diseño de software que define una dependencia del tipo uno a muchos entre objetos, de manera que cuando uno de los objetos cambia su estado, notifica este cambio a todos los dependientes
 the Iterator pattern : En diseño de software, el patrón de diseño Iterador, define una interfaz que declara los métodos necesarios para acceder secuencialmente a un grupo de objetos de una colección
