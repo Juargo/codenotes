@@ -1,12 +1,40 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      html {
+        font-size: 22px;
+      }
+      body {
+        padding: 1rem;
+      }
+      .card {
+        background-color: dodgerblue;
+        color: white;
+        padding: 1rem;
+        height: 4rem;
+      }
+      .cards {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 1rem;
+      }
+      @media (min-width: 600px) {
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 900px) {
+        .cards {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="cards">
-        <a href="#"><div class="card"><img src="images/golang.png" alt="" ><span align="center">golang</span>  </div></a>
+      <div class="card">Golang</div>
       <div class="card">TWO</div>
       <div class="card">THREE</div>
       <div class="card">FOUR</div>
