@@ -33,6 +33,10 @@ html {
     color: white;
     font-size: 2rem;
   }
+
+  img{
+    width: 29%;height: 104px;margin-top: -7px;
+  }
   @media (min-width: 600px) {
     .cards {
       grid-template-columns: repeat(2, 1fr);
@@ -41,5 +45,19 @@ html {
   @media (min-width: 900px) {
     .cards {
       grid-template-columns: repeat(3, 1fr);
+    }
+    .card{
+        height: 2rem;
+
+    }
+
+    img{
+        width: 35%;
+        height: 62px;
+    }
+
+    span{
+        font-size: 14vw;
+        left: 105px;
     }
   }
