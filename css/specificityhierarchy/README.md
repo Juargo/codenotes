@@ -46,7 +46,7 @@ Las reglas usadas en el html son tienen mayor rango
 
 ![css6](./images/6csshtml.PNG)
 
-y las relgas inline son tienen aún mayor rango
+y las relgas inline tienen aún mayor rango
 
 ![css7](./images/7csshtml.PNG)
 
