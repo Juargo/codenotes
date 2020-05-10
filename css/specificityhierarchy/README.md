@@ -42,7 +42,7 @@ El uso de ID es el más alto
 
 fuente: <https://medium.com/@ae_cordova/avoid-headaches-by-understanding-css-specificity-4aa214557eb>
 
-Las reglas usadas en el html son tienen mayor rango
+Las reglas usadas en el html tienen mayor rango
 
 ![css6](./images/6csshtml.PNG)
 
