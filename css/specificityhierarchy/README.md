@@ -38,7 +38,8 @@ El uso de ID es el más alto
 
 ## Hierarchy
 
-![hierarchy](./images/jerarquia2.PNG)
+![hierarchy](./images/jerarquia2.png)
+
 fuente: <https://medium.com/@ae_cordova/avoid-headaches-by-understanding-css-specificity-4aa214557eb>
 
 Las reglas usadas en el html son tienen mayor rango
@@ -51,5 +52,5 @@ y las relgas inline son tienen aún mayor rango
 
 ## Ilustraciones
 
-<https://specifishity.com/>
-<https://stuffandnonsense.co.uk/archives/css_specificity_wars.html>
+- <https://specifishity.com/>
+- <https://stuffandnonsense.co.uk/archives/css_specificity_wars.html>
