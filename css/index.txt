@@ -1,0 +1,56 @@
+Element class selector
+elementos con clase blue
+p.blue {
+    color: blue;
+}
+
+
+
+Descendant Selectors
+elemento <a> que  esté dentro de un ul con clase menu y dentro de un li 
+ul.menu li a {
+    text-decoration: none;
+}
+
+
+
+Child Selectors
+Aplica a elementos ol que esten dentro de elementos li que sea hijos directos de un ul
+ul > li ol {
+    list-style: none;
+}
+
+
+
+Adjacent Sibling Selectors
+The adjacent sibling selectors can be used to select sibling elements (i.e. elements at the same level). This selector has the syntax like: E1 + E2, where E2 is the target of the selector.
+
+The selector h1 + p in the following example will select the <p> elements only if both the <h1> and <p> elements share the same parent in the document tree and <h1> is immediately precedes the <p> element. That means only those paragraphs that come immediately after each <h1> heading will have the associated style rules. Let's see how this selector actually works:
+
+h1 + p {
+    color: blue;
+    font-size: 18px;
+}
+ul.task + p {
+    color: #f0f;
+    text-indent: 30px;
+}
+
+The general sibling selector is similar to the adjacent sibling selector (E1 + E2), but it is less strict. A general sibling selector is made up of two simple selectors separated by the tilde (∼) character. It can be written like: E1 ∼ E2, where E2 is the target of the selector.
+
+The selector h1 ∼ p in the example below will select all the <p> elements that preceded by the <h1> element, where all the elements share the same parent in the document tree.
+
+h1 ∼ p {
+    color: blue;
+    font-size: 18px;
+}
+ul.task ∼ p {
+    color: #f0f;
+    text-indent: 30px;
+}
+
+
+Group Selectors
+h1, h2, h3 {
+    font-weight: normal;
+}

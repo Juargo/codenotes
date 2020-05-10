@@ -1,0 +1,24 @@
+@import "../normalize-reset/normalize.css";
+@import "../normalize-reset/reset.local.css";
+
+.h1class{
+    color:red;
+    font-size: 20px;
+}
+
+h1{
+    color:blue 
+}
+h2{
+    color:blue
+}
+
+ul li.h1class{
+    color: royalblue;
+    font-size: 50px;
+}
+
+li >p{
+    color:green;
+    font-size: 50px;
+}

@@ -1,0 +1,41 @@
+@import "../normalize-reset/normalize.css";
+
+/* 
+- count the number of ID selectors in the selector (= a)
+- count the number of class selectors, attributes selectors, and pseudo-classes in the selector (= b)
+- count the number of type selectors and pseudo-elements in the selector (= c)
+- ignore the universal selector 
+*/
+
+/* a=0 b=1 c=1 -> 11 */
+/* #ulliid1.classulli ul li{
+    color:black
+} */
+
+/* a=1 b=0 c=0 -> 100 */
+#ulliid{
+  color:orange
+}
+
+/* a=1 b=0 c=1 -> 101 */
+#ulid li{
+    color:green
+}
+
+/* a=0 b=0 c=2 -> 2 */
+ul li{
+    color:pink
+}
+
+
+/* a=0 b=0 c=1 -> 1 */
+li{
+    color:blue
+}
+
+/* a=0 b=0 c=0 -> 0 */
+*{
+    color:red
+}
+
+
