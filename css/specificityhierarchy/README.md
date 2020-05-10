@@ -35,3 +35,21 @@ Volvemos a pisar el valor agregando más especialización
 El uso de ID es el más alto
 
 ![css4](./images/4csshtml.PNG)
+
+## Hierarchy
+
+![hierarchy](./images/jerarquia2.PNG)
+fuente: <https://medium.com/@ae_cordova/avoid-headaches-by-understanding-css-specificity-4aa214557eb>
+
+Las reglas usadas en el html son tienen mayor rango
+
+![css6](./images/6csshtml.PNG)
+
+y las relgas inline son tienen aún mayor rango
+
+![css7](./images/7csshtml.PNG)
+
+## Ilustraciones
+
+<https://specifishity.com/>
+<https://stuffandnonsense.co.uk/archives/css_specificity_wars.html>
