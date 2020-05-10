@@ -6,4 +6,4 @@ Mientras más especifico es el selector más alto es la prioridad
 
 ![hierarchy](./images/jerarquia.png)
 
-fuente: https://medium.com/@ae_cordova/avoid-headaches-by-understanding-css-specificity-4aa214557ebf
+fuente: <<https://medium.com/@ae_cordova/avoid-headaches-by-understanding-css-specificity-4aa214557eb>
