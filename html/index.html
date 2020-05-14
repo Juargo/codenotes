@@ -2,73 +2,131 @@
 <!-- DOCTYPEs are required for legacy reasons. When omitted, browsers tend to use a different rendering mode that is incompatible with some specifications. 
 Including the DOCTYPE in a document ensures that the browser makes a best-effort attempt at following the relevant specifications. -->
 
-        <!-- The semantics es importante para que el navegador entienda la importancia y la diferencia de los elementos.  -->
-        <!-- Cuando NO se utiliza el elemento o atributo HTML apropiado, priva a los procesadores HTML de información semántica valiosa.
+<!-- The semantics es importante para que el navegador entienda la importancia y la diferencia de los elementos.  -->
+<!-- Cuando NO se utiliza el elemento o atributo HTML apropiado, priva a los procesadores HTML de información semántica valiosa.
         hay poca información semántica disponible para los navegadores web, motores de búsqueda y tecnologías de asistencia.
         El despliegue se puede modificar con css, reseteando incluso el css por defecto para crear los propios. Pero la semantica no debe ser reemplazada por otro elemento -->
-        <!-- Semantic -->
+<!-- Semantic -->
 
 <html>
-    <head>
-        <!-- metadata content -->
-        <!-- El contenido de metadatos es contenido que establece la presentación o el comportamiento del resto del contenido,
+
+<head>
+  <!-- metadata content -->
+  <!-- El contenido de metadatos es contenido que establece la presentación o el comportamiento del resto del contenido,
          o que establece la relación del documento con otros documentos, o que transmite otra información "fuera de banda". -->
-        <base href="http://127.0.0.1:5500/html/" target="_blank"> <!--Base url para los links -->
-        <title>HTML example</title>
-    </head>
-    <body>
-       
-        <!-- flow content,Phrasing content, Interactive content, Palpable content. -->
-        <a href="chapter1.html" rev="toc" rel="next">chapter 1</a> 
-        <a href="chapter2.html" rev="toc">chapter 2</a>
+  <base href="http://127.0.0.1:5500/html/" target="_blank" />
+  <!--Base url para los links -->
+  <title>HTML example</title>
+</head>
 
-        <!-- flow content, Phrasing content, Palpable content -->
-        <abbr title="World Wide Web Consortium">W3C</abbr> <!--Abreviatura -->
+<body>
+  <!-- flow content,Phrasing content, Interactive content, Palpable content. -->
+  <a href="chapter1.html" rev="toc" rel="next">chapter 1</a>
+  <a href="chapter2.html" rev="toc">chapter 2</a>
 
-         <!-- flow content,Phrasing content. -->
-         <address><!--Contact information -->
-            Lola the cat is at
-            Latitude: 51.47852
-            Longitude: -0.1449519
-          </address>
+  <!-- flow content, Phrasing content, Palpable content -->
+  <abbr title="World Wide Web Consortium">W3C</abbr>
+  <!--Abreviatura -->
 
-          <!-- Flow content, Phrasing content
+  <!-- flow content,Phrasing content. -->
+  <address>
+    <!--Contact information -->
+    Lola the cat is at Latitude: 51.47852 Longitude: -0.1449519
+  </address>
+
+  <!-- Flow content, Phrasing content
           Area es utilizado para agregar links de interacción en las imágenes -->
-          <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+  <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379" />
 
-          <map name="workmap">
-            <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
-            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
-            <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
-          </map>
-          
-          <!-- Flow content, Sectioning content,Palpable content.
+  <map name="workmap">
+    <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm" />
+    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" />
+    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm" />
+  </map>
+
+  <!-- Flow content, Sectioning content,Palpable content.
           Articulo tipo blog-->
-          <article vocab="http://schema.org/" typeof="Article">
-            <header>
-              <h2 property="name">The Very First Rule of Life</h2>
-              <p property="datePublished"><time datetime="2018-02-07">3 days ago</time></p>
-            </header>
-            <div property="articleBody">
-              <p>Always check that your computer is plugged in before you complain it isn’t working.</p>
-            </div>
-            <footer>
-              <a href="?comments=1">Show comments...</a>
-            </footer>
-          </article>
+  <article vocab="http://schema.org/" typeof="Article">
+    <header>
+      <h2 property="name">The Very First Rule of Life</h2>
+      <p property="datePublished">
+        <time datetime="2018-02-07">3 days ago</time>
+      </p>
+    </header>
+    <div property="articleBody">
+      <p>
+        Always check that your computer is plugged in before you complain it
+        isn’t working.
+      </p>
+    </div>
+    <footer>
+      <a href="?comments=1">Show comments...</a>
+    </footer>
+  </article>
 
-          <!-- Flow content, Sectioning content, Palpable content.
+  <!-- Flow content, Sectioning content, Palpable content.
           Assistive Technology may convey the semantics of the aside to users. This information can provide a hint to users as to the type of content. 
           For example the role of the element, which in this case is "complementary", can be announced by screen reader software when a user navigates to an aside element. 
           User Agents may also provide methods to navigate to aside elements.
 
           It’s not appropriate to use the aside element just for parentheticals, since those are part of the main flow of the document. -->
 
-          <aside>
-            <h2>Switzerland</h2>
-            <p>Switzerland, a land-locked country in the middle of geographic Europe, has not joined the geopolitical European Union, though it is a signatory to a number of European treaties.</p>
-          </aside>
-        <h1></h1>
-      
-    </body>
+  <aside>
+    <h2>Switzerland</h2>
+    <p>
+      Switzerland, a land-locked country in the middle of geographic Europe,
+      has not joined the geopolitical European Union, though it is a signatory
+      to a number of European treaties.
+    </p>
+  </aside>
+
+  <!-- Flow content, Phrasing content, Palpable content. -->
+  <!-- <b></b> sirve para enfatizar en casos alternativos a em, strong. The b element should be used as a last resort when no other element is more appropriate. In particular, 
+          headings should use the h1 to h6 elements, stress emphasis should use the em element, importance should be denoted with the strong element, and text marked or highlighted 
+          should use the mark element. -->
+  <p>The <b>frobonitor</b> and <b>barbinator</b> components are fried.</p>
+
+  <!-- Flow content, Phrasing content, Palpable content. -->
+  <!-- bdo direcciona el texto y bdi lo aisla de esta redirección -->
+  <bdo dir="rtl"> <bdi>hola</bdi> que tal muchaches</bdo>
+  <bdo dir="ltr"> <bdi>hola</bdi> que tal muchaches</bdo>
+
+  <!-- Flow content, Sectioning root, Palpable content. -->
+  <!-- bloque de cita -->
+  <blockquote>
+    <p>[Fred] then said he liked [...] fish.</p>
+  </blockquote>
+
+  <!-- Flow content, Phrasing content. -->
+  <!-- línea en blanco. elements must be used only for line breaks that are actually part of the content, as in poems or addresses.
+    br elements must not be used for separating thematic groups in a paragraph. Se debe usar <p></p> -->
+  <p>
+    P. Sherman<br />
+    42 Wallaby Way<br />
+    Sydney
+  </p>
+
+  <!-- Flow content, Phrasing content, Interactive content, Palpable content. -->
+  <button type="button" onclick="alert('This 15-20 minute piece was composed by George Gershwin.')">
+    Show hint
+  </button>
+  
+  <!-- ##Canvas## -->
+
+  <!-- Flow content, Phrasing content, Palpable content. -->
+  <!-- reference to a creative work  -->
+  <p>Who is your favorite doctor (in <cite>Doctor Who</cite>)?</p>
+
+
+  <!-- Flow content, Phrasing content,Palpable content. -->
+  <p>The <code>code</code> element represents a fragment of computer code.</p>
+
+  <!-- Flow content, Phrasing content,Palpable content. -->
+  <h1 itemscope>
+    <data itemprop="product-id" value="9678AOU879">The Instigator 2000</data>
+   </h1>
+
+
+</body>
+
 </html>
