@@ -15,18 +15,104 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   <!-- El contenido de metadatos es contenido que establece la presentación o el comportamiento del resto del contenido,
          o que establece la relación del documento con otros documentos, o que transmite otra información "fuera de banda". -->
   <base href="http://127.0.0.1:5500/html/" target="_blank" />
+
+  <!-- links -->
+  <!-- icon -->
+  <link rel="icon" href="favicon.ico">
+  <!-- se puede cargar css dependiendo del medio -->
+  <link href="print.css" rel="stylesheet" media="print">
+  <link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)">
+  <!-- A rel value of preload indicates that the browser should preload this resource (see Preloading content with rel="preload" for more details),  -->
+  <!-- with the as attribute indicating the specific class of content being fetched. The crossorigin attribute indicates whether the resource should be fetched with a CORS request. -->
+  <link rel="preload" href="myFont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <!--Base url para los links -->
   <title>HTML example</title>
 </head>
 
 <body>
+  <!-- ### heading content ####-->
+  <h1>Beetles</h1>
+  <!--Se utiliza solo un h1-->
+  <h2>External morphology</h2>
+  <h3>Head</h3>
+  <h4>Mouthparts</h4>
+  <h3>Thorax</h3>
+  <h4>Prothorax</h4>
+  <h4>Pterothorax</h4>
+
+  <!--  cite .- reference to a creative work --Phrasing content  -->
+  <!-- blockquote .- bloque de cita  ---only flow content-->
+  <blockquote>
+    <p>Who is your favorite doctor (in <cite>Doctor Who</cite>)?</p>
+  </blockquote>
+
+
+  <!-- abbr .- Abreviatura -- Phrasing content -->
+  <abbr title="World Wide Web Consortium">W3C</abbr>
+
+  <!-- b .- HTML Bring Attention To elemenl --Phrasing content  -->
+  <p><b>Palabras</b> que se quieren resaltar pero no tienen demasiada importancia</p>
+
+  <!-- bdo - bdi .- direcciona el texto y bdi lo aisla de esta redirección --Phrasing content -->
+  <bdo dir="rtl"> <bdi>hola</bdi> que tal muchaches</bdo>
+  <bdo dir="ltr"> <bdi>hola</bdi> que tal muchaches</bdo>
+
+  <!-- br .- línea en blanco. elements must be used only for line breaks that are actually part of the content, as in poems or addresses.
+     elements must not be used for separating thematic groups in a paragraph. Se debe usar <p></p> -- --Phrasing content-->
+  <p>
+    P. Sherman<br />
+    42 Wallaby Way<br />
+    Sydney
+  </p>
+
+  <!-- code .- The <code> element by itself only represents a single phrase of code or line of code --Phrasing content -->
+  <p>The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the array.</p>
+
+
+  <!-- data .- se utiliza para agregar una traducción legible por máquina de un contenido determinado. -->
+  <h1 itemscope>
+    <data itemprop="product-id" value="9678AOU879">The Instigator 2000</data>
+  </h1>
+
+  <!-- Flow content, Phrasing content, Interactive content -->
+  <button type="button" onclick="alert('This 15-20 minute piece was composed by George Gershwin.')">
+    Show hint
+  </button>
+
+  <!-- The <datalist> tag is used to provide an "autocomplete" feature for <input> elements. Users will see a drop-down list of pre-defined options as they input data. --Phrasing content-->
+    <label>
+      Favourite Muppet:
+      <input name="muppet" list="muppets">
+    </label>
+    <datalist id="muppets">
+      <label>
+        or select from the list:
+        <select name="muppet">
+          <option value=""></option>
+          <option>Kermit</option>
+          <option>Miss Piggy</option>
+        </select>
+      </label>
+    </datalist>
+  
+
+
+
+  <!-- ###### Embedded content ##### -->
+  <!-- Embedded content imports another resource or inserts content from another mark-up language or namespace into the document. -->
+  <!-- ##Canvas## -->
+  <!-- ##audio## -->
+
+
+
+
+
   <!-- flow content,Phrasing content, Interactive content, Palpable content. -->
   <a href="chapter1.html" rev="toc" rel="next">chapter 1</a>
   <a href="chapter2.html" rev="toc">chapter 2</a>
 
   <!-- flow content, Phrasing content, Palpable content -->
-  <abbr title="World Wide Web Consortium">W3C</abbr>
-  <!--Abreviatura -->
+
 
   <!-- flow content,Phrasing content. -->
   <address>
@@ -86,46 +172,23 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
           should use the mark element. -->
   <p>The <b>frobonitor</b> and <b>barbinator</b> components are fried.</p>
 
-  <!-- Flow content, Phrasing content, Palpable content. -->
-  <!-- bdo direcciona el texto y bdi lo aisla de esta redirección -->
-  <bdo dir="rtl"> <bdi>hola</bdi> que tal muchaches</bdo>
-  <bdo dir="ltr"> <bdi>hola</bdi> que tal muchaches</bdo>
 
-  <!-- Flow content, Sectioning root, Palpable content. -->
-  <!-- bloque de cita -->
-  <blockquote>
-    <p>[Fred] then said he liked [...] fish.</p>
-  </blockquote>
+
+
+  <!-- Flow content, Phrasing content,Palpable content. -->
+
 
   <!-- Flow content, Phrasing content. -->
-  <!-- línea en blanco. elements must be used only for line breaks that are actually part of the content, as in poems or addresses.
-    br elements must not be used for separating thematic groups in a paragraph. Se debe usar <p></p> -->
-  <p>
-    P. Sherman<br />
-    42 Wallaby Way<br />
-    Sydney
-  </p>
-
-  <!-- Flow content, Phrasing content, Interactive content, Palpable content. -->
-  <button type="button" onclick="alert('This 15-20 minute piece was composed by George Gershwin.')">
-    Show hint
-  </button>
   
-  <!-- ##Canvas## -->
+  <!-- Flow contentPhrasing content. -->
 
-  <!-- Flow content, Phrasing content, Palpable content. -->
-  <!-- reference to a creative work  -->
-  <p>Who is your favorite doctor (in <cite>Doctor Who</cite>)?</p>
-
-
-  <!-- Flow content, Phrasing content,Palpable content. -->
-  <p>The <code>code</code> element represents a fragment of computer code.</p>
-
-  <!-- Flow content, Phrasing content,Palpable content. -->
-  <h1 itemscope>
-    <data itemprop="product-id" value="9678AOU879">The Instigator 2000</data>
-   </h1>
-
+  <h1>To Do</h1>
+  <ul>
+    <li>Empty the dishwasher</li>
+    <li><del datetime="2009-10-11T01:25-07:00">Watch Walter Lewin’s lectures</del></li>
+    <li><del datetime="2009-10-10T23:38-07:00">Download more tracks</del></li>
+    <li>Buy a printer</li>
+  </ul>
 
 </body>
 
