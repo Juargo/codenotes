@@ -48,8 +48,11 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   </hgroup>
 
 
+<!-- ##### Palpable content -->
+  <!-- Content is palpable when it's neither empty or hidden; it is content that is rendered and is substantive. Elements whose model is flow content or phrasing content should have at least one node which is palpable. -->
 
 
+  
   <!--  cite .- reference to a creative work --Phrasing content  -->
   <!-- blockquote .- bloque de cita  ---only flow content-->
   <blockquote>
@@ -94,8 +97,8 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   <!-- mark .- marca -- phrasing content, palpable content. -->
   <p>Several species of <mark>salamander</mark> inhabit the temperate rainforest of the Pacific Northwest.</p>
 
-
-
+<!-- strong .-  phrasing content, palpable content. -->
+  <p>... the most important rule, the rule you can never forget, no matter how much he cries, no matter how much he begs: <strong>never feed him after midnight</strong>.</p>
 
 
   <!-- br .- línea en blanco. elements must be used only for line breaks that are actually part of the content, as in poems or addresses.
@@ -122,6 +125,9 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
     array.</p>
 
 
+
+  <!-- var .- represents the name of a variable in a mathematical expression or a programming contex --phrasing content, palpable content. -->
+  <p>The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where <var>l</var> represents the length, <var>w</var> the width and <var>h</var> the height of the box.</p>
 
 
 
@@ -275,6 +281,15 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
 
   <!-- embed --External content --Phrasing Content, embedded content,interactive content, palpable content. -->
   <embed type="video/webm" src="/media/examples/flower.mp4" width="250" height="200">
+
+
+video .-
+<video controls>
+  <source src="myVideo.mp4" type="video/mp4">
+  <source src="myVideo.webm" type="video/webm">
+  <p>Your browser doesn't support HTML5 video. Here is
+     a <a href="myVideo.mp4">link to the video</a> instead.</p>
+</video>
 
 
 
@@ -498,6 +513,90 @@ body {
 
     <p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
     
+
+
+<!-- small .- phrasing content -->
+    <p>MDN Web Docs is a learning platform for Web technologies and the software that powers the Web.</p>
+
+    <hr>
+    
+    <p><small>The content is licensed under a Creative Commons Attribution-ShareAlike 2.5 Generic License.</small></p>
+    
+
+
+<!-- span .- es un contenedor genérico en línea para redactar contenido, que no representa nada inherentemente. Se puede usar para agrupar elementos con fines de estilo  -->
+<!-- (usando los atributos classo id), o porque comparten valores de atributos, como lang. Debe usarse solo cuando ningún otro elemento semántico sea apropiado. <span>es  -->
+<!-- muy parecido a un <div>elemento, pero <div>es un elemento de nivel de bloque mientras que a <span>es un elemento en línea . -->
+  <!-- phrasing content. -->
+  <p>Gradually add the <span class="ingredient">olive oil</span> while running the blender slowly.</p>
+
+
+
+
+  <!-- sub .- subindice -- phrasing content, palpable content. -->
+  <p>Almost every developer's favorite molecule is
+    C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."</p>
+    
+<!-- sup .- Superscript element -- phrasing content, palpable content. -->
+    <p><var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var></p>
+
+
+<!-- svg .- Dibujar --Container element, Structural element -->
+    <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
+      <circle cx="50" cy="50" r="40" />
+      <circle cx="150" cy="50" r="4" />
+    
+      <svg viewBox="0 0 10 10" x="200" width="100">
+        <circle cx="5" cy="5" r="4" />
+      </svg>
+    </svg>
+
+
+
+    <!-- template .- Crear un template de una sección de código html como una tabla para luego agregar vía javascript contenido -->
+    <!-- ---Metadata content, flow content, phrasing content, script-supporting element -->
+    <!-- no se muestra en pantalla hasta que vía javascript se agregen datos -->
+    <table id="producttable">
+      <thead>
+        <tr>
+          <td>UPC_Code</td>
+          <td>Product_Name</td>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- existing data could optionally be included here -->
+      </tbody>
+    </table>
+    
+    <template id="productrow">
+      <tr>
+        <td class="record"></td>
+        <td></td>
+      </tr>
+    </template>
+    
+    
+
+
+
+<!-- time .- Se agrega información del tiempo en formato máquina para mejorar el search engine -- phrasing content, palpable content. -->
+    <p>The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde Park.</p>
+
+
+
+
+
+
+
+  <!-- wbr .- represents a word break opportunity. Determinar donde se quiebra un parrafo al disminuir el tamaño del browser -- phrasing content. -->
+
+    <div id="example-paragraphs">
+      <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
+      <p>Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz</p>
+      <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+  </div>
+  
+
 
 </body>
 
