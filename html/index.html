@@ -56,7 +56,8 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
     <p>Who is your favorite doctor (in <cite>Doctor Who</cite>)?</p>
   </blockquote>
 
-
+  <!-- indica que el texto adjunto es una cita corta en línea -->
+  <p>When Dave asks HAL to open the pod bay door, HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I'm sorry, Dave. I'm afraid I can't do that.</q></p>
 
 
   <!-- abbr .- Abreviatura -- Phrasing content -->
@@ -285,7 +286,7 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
 
 
 
-  
+
 
   <!-- flow content,Phrasing content. -->
   <address>
@@ -373,7 +374,130 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
     </p>
   </aside>
 
+  <!-- nav .- Navegacion -- sectioning content, palpable content -->
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
+
+  <!-- math .- Permite utilizar la notación mathML  -->
+  <math>
+    <mrow>
+      <mrow>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>b</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <mo>=</mo>
+      <msup>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </math>
+
+
+  <!-- meter .- un rango en barra, no se debe usar como progressbar --phrasing content, labelable content, palpable content. -->
+  <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+    at 50/100
+  </meter>
+
+
+  <!-- noscript -inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser.--Metadata content, flow content, phrasing content. -->
+  <noscript>
+    <!-- anchor linking to external file -->
+    <a href="https://www.mozilla.com/">External Link</a>
+  </noscript>
+  <p>Rocks!</p>
+
+
+  <!-- object .- epresents an external resource -- phrasing content; embedded content, palpable content; if the element has a usemap attribute, interactive content; listed, submittable form-associated element. -->
+  <object type="application/pdf" data="/media/examples/In-CC0.pdf" width="250" height="200">
+  </object>
+
+
+
+  <!-- ol .- Order list -- -->
+  <ol>
+    <li>Mix flour, baking powder, sugar, and salt.</li>
+    <li>In another bowl, mix eggs, milk, and oil.</li>
+    <li>Stir both mixtures together.</li>
+    <li>Fill muffin tray 3/4 full.</li>
+    <li>Bake for 20 minutes.</li>
+  </ol>
+
+
+
+
+  <!-- output .- contenedor de un resultado -- phrasing content, listed, labelable, resettable form-associated element, palpable content. -->
+  <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="range" id="b" name="b" value="50" /> +
+    <input type="number" id="a" name="a" value="10" /> =
+    <output name="result" for="a b">60</output>
+  </form>
+
+
+
+
+  <!-- <picture> element contains zero or more <source> elements and one <img> element to offer alternative versions of an image for different display/device scenarios.  -->
+  <!-- The browser will consider each child <source> element and choose the best match among them. If no matches are found—or the browser doesn't support the <picture>  -->
+  <!-- element—the URL of the <img> element's src attribute is selected. The selected image is then presented in the space occupied by the <img> element. -->
+  <!-- phrasing content, embedded content -->
+  <picture>
+    <source srcset="/media/examples/surfer-240-200.jpg" media="(min-width: 800px)">
+    <img src="/media/examples/painted-hand-298-332.jpg" />
+  </picture>
+
+
+
+  <!-- pre .- Preformate text. Permite mostrar texto tal como uno lo escribe  -->
+  <p>Using CSS to change the font color is easy.</p>
+  <pre>
+body {
+  color: red;
+}
+</pre>
+
+
+
+
+
+<!-- progress .- -- phrasing content, labelable content, palpable content. -->
+<progress id="file" max="100" value="70"> 70% </progress>
+
+
+
+<!-- ruby .-Ruby annotations are for showing pronunciation of East Asian characters. --phrasing content, palpable content. -->
+<ruby>
+  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
+  </ruby>
+
+  
+<!-- s .- Use el <s>elemento para representar cosas que ya no son relevantes o que ya no son precisas. Sin embargo,  -->
+  <!-- <s>no es apropiado al indicar ediciones de documentos; para eso, use los elementos <del>y <ins>, según corresponda. -->
+    <!-- phrasing content -->
+    <p><s>There will be a few tickets available at the box office tonight.</s></p>
+
+
+
+
+
+
+    <!-- samp .- se usa para encerrar texto en línea que representa la salida de muestra (o citada) de un programa de computadora --phrasing content, palpable content. -->
+    <p>I was trying to boot my computer, but I got this hilarious message:</p>
+
+    <p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
+    
 
 </body>
 
