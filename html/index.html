@@ -30,6 +30,7 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
 </head>
 
 <body>
+
   <!-- ### heading content ####-->
   <h1>Beetles</h1>
   <!--Se utiliza solo un h1-->
@@ -40,6 +41,15 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   <h4>Prothorax</h4>
   <h4>Pterothorax</h4>
 
+  <!-- hgroup .- ulti-level heading -- heading content, palpable content -->
+  <hgroup>
+    <h1>Calculus I</h1>
+    <h2>Fundamentals</h2>
+  </hgroup>
+
+
+
+
   <!--  cite .- reference to a creative work --Phrasing content  -->
   <!-- blockquote .- bloque de cita  ---only flow content-->
   <blockquote>
@@ -47,15 +57,45 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   </blockquote>
 
 
+
+
   <!-- abbr .- Abreviatura -- Phrasing content -->
   <abbr title="World Wide Web Consortium">W3C</abbr>
 
+
+
+
+
+  <!-- Use <em> to indicate stress emphasis.
+    Use <strong> to indicate importance, seriousness, or urgency.
+    Use <mark> to indicate relevance.
+    Use <cite> to mark up the name of a work, such as a book, play, or song.
+    Use <dfn> to mark up the defining instance of a term. -->
+
+
   <!-- b .- HTML Bring Attention To elemenl --Phrasing content  -->
+  <!-- <b></b> sirve para enfatizar en casos alternativos a em, strong. The b element should be used as a last resort when no other element is more appropriate. In particular, 
+          headings should use the h1 to h6 elements, stress emphasis should use the em element, importance should be denoted with the strong element, and text marked or highlighted 
+          should use the mark element. -->
   <p><b>Palabras</b> que se quieren resaltar pero no tienen demasiada importancia</p>
 
-  <!-- bdo - bdi .- direcciona el texto y bdi lo aisla de esta redirección --Phrasing content -->
-  <bdo dir="rtl"> <bdi>hola</bdi> que tal muchaches</bdo>
-  <bdo dir="ltr"> <bdi>hola</bdi> que tal muchaches</bdo>
+  <!-- em --emphasis --Phrasing Content, Palpable Content -->
+  <p>Get out of bed <em>now</em>!</p>
+
+  <!-- i .- represents a range of text that is set off from the normal text  --phrasing content, palpable content. -->
+  <p>I looked at it and thought <i>This can't be real!</i></p>
+
+  <!-- dfn .- definition --Phrasing content -->
+  <!-- El id se puede referenciar -->
+  <p><dfn id="html-def">HTML</dfn> is the standard markup language for creating web pages.</p>
+  <p>Learn <a href="#html-def">HTML</a> now.</p>
+
+  <!-- mark .- marca -- phrasing content, palpable content. -->
+  <p>Several species of <mark>salamander</mark> inhabit the temperate rainforest of the Pacific Northwest.</p>
+
+
+
+
 
   <!-- br .- línea en blanco. elements must be used only for line breaks that are actually part of the content, as in poems or addresses.
      elements must not be used for separating thematic groups in a paragraph. Se debe usar <p></p> -- --Phrasing content-->
@@ -65,8 +105,23 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
     Sydney
   </p>
 
+
+
+
+  <!-- bdo - bdi .- direcciona el texto y bdi lo aisla de esta redirección --Phrasing content -->
+  <bdo dir="rtl"> <bdi>hola</bdi> que tal muchaches</bdo>
+  <bdo dir="ltr"> <bdi>hola</bdi> que tal muchaches</bdo>
+
+
+
+
+
   <!-- code .- The <code> element by itself only represents a single phrase of code or line of code --Phrasing content -->
-  <p>The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the array.</p>
+  <p>The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the
+    array.</p>
+
+
+
 
 
   <!-- data .- se utiliza para agregar una traducción legible por máquina de un contenido determinado. -->
@@ -74,27 +129,141 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
     <data itemprop="product-id" value="9678AOU879">The Instigator 2000</data>
   </h1>
 
+
+
+
   <!-- Flow content, Phrasing content, Interactive content -->
   <button type="button" onclick="alert('This 15-20 minute piece was composed by George Gershwin.')">
     Show hint
   </button>
 
-  <!-- The <datalist> tag is used to provide an "autocomplete" feature for <input> elements. Users will see a drop-down list of pre-defined options as they input data. --Phrasing content-->
+
+
+
+
+  <!-- The <datalist> tag is used to provide an "autocomplete" feature for <input> elements. 
+    Users will see a drop-down list of pre-defined options as they input data. --Phrasing content-->
+  <label>
+    Favourite Muppet:
+    <input name="muppet" list="muppets">
+  </label>
+  <datalist id="muppets">
     <label>
-      Favourite Muppet:
-      <input name="muppet" list="muppets">
+      or select from the list:
+      <select name="muppet">
+        <option value=""></option>
+        <option>Kermit</option>
+        <option>Miss Piggy</option>
+      </select>
     </label>
-    <datalist id="muppets">
-      <label>
-        or select from the list:
-        <select name="muppet">
-          <option value=""></option>
-          <option>Kermit</option>
-          <option>Miss Piggy</option>
-        </select>
-      </label>
-    </datalist>
-  
+  </datalist>
+
+
+
+
+
+  <!-- dl --Description list --Palpable Content -->
+  <!-- dt --Termino -->
+  <!-- dd --Description -->
+  <p>Cryptids of Cornwall:</p>
+  <dl>
+    <dt>Beast of Bodmin</dt>
+    <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+    <dt>Morgawr</dt>
+    <dd>A sea serpent.</dd>
+
+    <dt>Owlman</dt>
+    <dd>A giant owl-like creature.</dd>
+  </dl>
+
+
+
+
+
+  <!-- del .- deleted element --Phrasing content -->
+  <!-- ins .-inserted element --Phrasing content -->
+  <p>“You're late!”</p>
+  <del>
+    <p>“I apologize for the delay.”</p>
+  </del>
+  <ins cite="../howtobeawizard.html" datetime="2018-05">
+    <p>“A wizard is never late …”</p>
+  </ins>
+
+
+
+
+
+  <!-- kbd .-Keyboard Input element --phrasing content, palpable content -->
+  <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+
+
+
+  <!-- label .-Permitted parents	Any element that accepts phrasing content.-- phrasing content, interactive content, form-associated element, palpable content.  -->
+  <div class="preference">
+    <label for="cheese">Do you like cheese?</label>
+    <input type="checkbox" name="cheese" id="cheese">
+  </div>
+
+
+
+
+
+  <!-- details .- Crea una funcionalidad de open close para mostrar info --Interactive Content -->
+  <details>
+    <summary>Details</summary>
+    Something small enough to escape casual notice.
+  </details>
+
+
+  <!-- iframe .-represents a nested browsing context, embedding another HTML page into the current one --- phrasing content, embedded content, interactive content, palpable content. -->
+  <iframe title="Wikipedia page for Avocados" src="https://en.wikipedia.org/wiki/Avocado"></iframe>
+
+
+  <!-- fielset.- agrupar varios controles --Flow content, sectioning root, listed, form-associated element, palpable content. -->
+  <form action="#">
+    <fieldset disabled>
+      <legend>Disabled fieldset</legend>
+      <div>
+        <label for="name">Name: </label>
+        <input type="text" id="name" value="Chris">
+      </div>
+      <div>
+        <label for="pwd">Archetype: </label>
+        <input type="password" id="pwd" value="Wookie">
+      </div>
+    </fieldset>
+  </form>
+
+
+
+
+
+  <!-- ###input -->
+
+  <!-- figure .- Figura con título opcional --palpable content. -->
+  <!-- figcaption .-titulo -->
+  <figure>
+    <img src="/media/examples/elephant-660-480.jpg" alt="Elephant at sunset">
+    <figcaption>An elephant at sunset</figcaption>
+  </figure>
+
+
+
+
+
+
+  <!-- hr .- thematic break between paragraph-level elements -->
+  <p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+
+  <hr>
+
+  <p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+
+
+
+
 
 
 
@@ -103,6 +272,8 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   <!-- ##Canvas## -->
   <!-- ##audio## -->
 
+  <!-- embed --External content --Phrasing Content, embedded content,interactive content, palpable content. -->
+  <embed type="video/webm" src="/media/examples/flower.mp4" width="250" height="200">
 
 
 
@@ -111,8 +282,10 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   <a href="chapter1.html" rev="toc" rel="next">chapter 1</a>
   <a href="chapter2.html" rev="toc">chapter 2</a>
 
-  <!-- flow content, Phrasing content, Palpable content -->
 
+
+
+  
 
   <!-- flow content,Phrasing content. -->
   <address>
@@ -120,15 +293,34 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
     Lola the cat is at Latitude: 51.47852 Longitude: -0.1449519
   </address>
 
+
+
+
+
+
+
   <!-- Flow content, Phrasing content
           Area es utilizado para agregar links de interacción en las imágenes -->
+  <!-- map .- element is used with <area> elements to define an image map (a clickable link area). --phrasing content, palpable content. -->
   <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379" />
-
   <map name="workmap">
     <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm" />
     <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" />
     <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm" />
   </map>
+
+
+
+
+
+
+  <!-- img .- imagen -- phrasing content, embedded content, palpable content -->
+  <img src="/files/16864/clock-demo-200px.png" alt="Clock" srcset="/files/16864/clock-demo-200px.png 200w,
+          /files/16797/clock-demo-400px.png 400w" sizes="(max-width: 600px) 200px, 50vw">
+
+
+
+
 
   <!-- Flow content, Sectioning content,Palpable content.
           Articulo tipo blog-->
@@ -150,6 +342,21 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
     </footer>
   </article>
 
+
+  <!-- div .- division --only Flow Content -->
+  <div>
+    <p>Any kind of content here. Such as
+      &lt;p&gt;, &lt;table&gt;. You name it!</p>
+  </div>
+
+  <!-- Cuando usar article,section y div -->
+  <!-- article y section -->
+  <!-- - si requiere usar h1 h2  -->
+  <!-- - si el contenido tiene sentido entre ellos -->
+
+  <!-- article -->
+  <!-- - Si el contenido tiene sentido por si solo y puede ser sacado y puesto en otro lado y sigue teniendo sentido -->
+
   <!-- Flow content, Sectioning content, Palpable content.
           Assistive Technology may convey the semantics of the aside to users. This information can provide a hint to users as to the type of content. 
           For example the role of the element, which in this case is "complementary", can be announced by screen reader software when a user navigates to an aside element. 
@@ -166,29 +373,7 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
     </p>
   </aside>
 
-  <!-- Flow content, Phrasing content, Palpable content. -->
-  <!-- <b></b> sirve para enfatizar en casos alternativos a em, strong. The b element should be used as a last resort when no other element is more appropriate. In particular, 
-          headings should use the h1 to h6 elements, stress emphasis should use the em element, importance should be denoted with the strong element, and text marked or highlighted 
-          should use the mark element. -->
-  <p>The <b>frobonitor</b> and <b>barbinator</b> components are fried.</p>
 
-
-
-
-  <!-- Flow content, Phrasing content,Palpable content. -->
-
-
-  <!-- Flow content, Phrasing content. -->
-  
-  <!-- Flow contentPhrasing content. -->
-
-  <h1>To Do</h1>
-  <ul>
-    <li>Empty the dishwasher</li>
-    <li><del datetime="2009-10-11T01:25-07:00">Watch Walter Lewin’s lectures</del></li>
-    <li><del datetime="2009-10-10T23:38-07:00">Download more tracks</del></li>
-    <li>Buy a printer</li>
-  </ul>
 
 </body>
 
