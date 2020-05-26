@@ -13,6 +13,9 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
 <!-- En línea: <em>first</em><em>second</em><em>third</em> No generan una nueva línea -->
 <!-- En bloque: <p>fourth</p><p>fifth</p><p>sixth</p> . Son bloques individuales. Aparecerán bloques en blanco, antes y después  -->
 
+<!-- Los motores de búsqueda que indexan su página consideran el contenido de los encabezados como palabras clave importantes para influir
+ en los rankings de búsqueda de la página. Sin encabezados, su página funcionará mal en términos de SEO (Search Engine Optimization). -->
+
 <html>
 
 <head>
@@ -36,6 +39,8 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
 
 <body>
   <a href='http://www.example.com' title='Isn&#39;t this fun?'>A link to my example.</a>
+
+
   <!-- ### heading content ####-->
   <h1>Beetles</h1>
   <!--Se utiliza solo un h1-->
@@ -64,6 +69,46 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
    <!-- these are often elements that introduce external content to the page: <blockquote>, <details>, <fieldset>, <figure> and <td>." -->
 
 
+
+  <!-- Use <em> to indicate stress emphasis. si se quiere un texto en italic usar <i> o <span>+css
+    Use <strong> to indicate importance, seriousness, or urgency. si se quiere negrita usar <b> o <span>+css
+    Use <mark> to indicate relevance.
+    Use <cite> to mark up the name of a work, such as a book, play, or song.
+    Use <dfn> to mark up the defining instance of a term. -->
+
+      <!-- b, i, u. Elements like this, which only affect presentation and not semantics, are known as  -->
+      <!-- presentational elements and should no longer be used, because as we've seen before, semantics is so important to accessibility, SEO, etc. -->
+
+      <!-- i> se utiliza para transmitir un significado tradicionalmente transmitido por cursiva: palabras extranjeras, designación taxonómica, términos técnicos, un pensamiento ...
+      <b> se utiliza para transmitir un significado transmitido tradicionalmente en negrita: palabras clave, nombres de productos, oración principal ...
+      <u> se utiliza para transmitir un significado tradicionalmente transmitido por subrayado: nombre correcto, falta de ortografía ... -->
+
+  <!-- b .- HTML Bring Attention To elemenl --Phrasing content  -->
+  <!-- <b></b> sirve para enfatizar en casos alternativos a em, strong. The b element should be used as a last resort when no other element is more appropriate. In particular, 
+          headings should use the h1 to h6 elements, stress emphasis should use the em element, importance should be denoted with the strong element, and text marked or highlighted 
+          should use the mark element. -->
+          <p><b>Palabras</b> que se quieren resaltar pero no tienen demasiada importancia</p>
+
+          <!-- em --emphasis --Phrasing Content, Palpable Content -->
+          <p>Get out of bed <em>now</em>!</p>
+        
+          <!-- i .- represents a range of text that is set off from the normal text  --phrasing content, palpable content. -->
+          <p>I looked at it and thought <i>This can't be real!</i></p>
+        
+          <!-- dfn .- definition --Phrasing content -->
+          <!-- El id se puede referenciar -->
+          <p><dfn id="html-def">HTML</dfn> is the standard markup language for creating web pages.</p>
+          <p>Learn <a href="#html-def">HTML</a> now.</p>
+        
+          <!-- mark .- marca -- phrasing content, palpable content. -->
+          <p>Several species of <mark>salamander</mark> inhabit the temperate rainforest of the Pacific Northwest.</p>
+        
+        <!-- strong .-  phrasing content, palpable content. -->
+          <p>... the most important rule, the rule you can never forget, no matter how much he cries, no matter how much he begs: <strong>never feed him after midnight</strong>.</p>
+
+
+
+
   <!--  cite .- reference to a creative work --Phrasing content  -->
   <!-- blockquote .- bloque de cita  ---only flow content-->
   <blockquote>
@@ -81,35 +126,7 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
 
 
 
-  <!-- Use <em> to indicate stress emphasis.
-    Use <strong> to indicate importance, seriousness, or urgency.
-    Use <mark> to indicate relevance.
-    Use <cite> to mark up the name of a work, such as a book, play, or song.
-    Use <dfn> to mark up the defining instance of a term. -->
 
-
-  <!-- b .- HTML Bring Attention To elemenl --Phrasing content  -->
-  <!-- <b></b> sirve para enfatizar en casos alternativos a em, strong. The b element should be used as a last resort when no other element is more appropriate. In particular, 
-          headings should use the h1 to h6 elements, stress emphasis should use the em element, importance should be denoted with the strong element, and text marked or highlighted 
-          should use the mark element. -->
-  <p><b>Palabras</b> que se quieren resaltar pero no tienen demasiada importancia</p>
-
-  <!-- em --emphasis --Phrasing Content, Palpable Content -->
-  <p>Get out of bed <em>now</em>!</p>
-
-  <!-- i .- represents a range of text that is set off from the normal text  --phrasing content, palpable content. -->
-  <p>I looked at it and thought <i>This can't be real!</i></p>
-
-  <!-- dfn .- definition --Phrasing content -->
-  <!-- El id se puede referenciar -->
-  <p><dfn id="html-def">HTML</dfn> is the standard markup language for creating web pages.</p>
-  <p>Learn <a href="#html-def">HTML</a> now.</p>
-
-  <!-- mark .- marca -- phrasing content, palpable content. -->
-  <p>Several species of <mark>salamander</mark> inhabit the temperate rainforest of the Pacific Northwest.</p>
-
-<!-- strong .-  phrasing content, palpable content. -->
-  <p>... the most important rule, the rule you can never forget, no matter how much he cries, no matter how much he begs: <strong>never feed him after midnight</strong>.</p>
 
 
   <!-- br .- línea en blanco. elements must be used only for line breaks that are actually part of the content, as in poems or addresses.
