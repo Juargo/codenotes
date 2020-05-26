@@ -2,16 +2,21 @@
 <!-- DOCTYPEs are required for legacy reasons. When omitted, browsers tend to use a different rendering mode that is incompatible with some specifications. 
 Including the DOCTYPE in a document ensures that the browser makes a best-effort attempt at following the relevant specifications. -->
 
-<!-- The semantics es importante para que el navegador entienda la importancia y la diferencia de los elementos.  -->
+<!-- HTML no es un lenguaje de programación; Es un lenguaje de marcado  utilizado para indicarle a su navegador cómo estructurar las páginas web que visita -->
+<!-- La semantica es importante para que el navegador entienda la importancia y la diferencia de los elementos.  -->
 <!-- Cuando NO se utiliza el elemento o atributo HTML apropiado, priva a los procesadores HTML de información semántica valiosa.
         hay poca información semántica disponible para los navegadores web, motores de búsqueda y tecnologías de asistencia.
         El despliegue se puede modificar con css, reseteando incluso el css por defecto para crear los propios. Pero la semantica no debe ser reemplazada por otro elemento -->
 <!-- Semantic -->
 
+<!-- Hay dos categorías de elementos HTML -->
+<!-- En línea: <em>first</em><em>second</em><em>third</em> No generan una nueva línea -->
+<!-- En bloque: <p>fourth</p><p>fifth</p><p>sixth</p> . Son bloques individuales. Aparecerán bloques en blanco, antes y después  -->
+
 <html>
 
 <head>
-  <!-- metadata content -->
+  <!-- CAT::: Metadata content -->
   <!-- El contenido de metadatos es contenido que establece la presentación o el comportamiento del resto del contenido,
          o que establece la relación del documento con otros documentos, o que transmite otra información "fuera de banda". -->
   <base href="http://127.0.0.1:5500/html/" target="_blank" />
@@ -30,7 +35,7 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
 </head>
 
 <body>
-
+  <a href='http://www.example.com' title='Isn&#39;t this fun?'>A link to my example.</a>
   <!-- ### heading content ####-->
   <h1>Beetles</h1>
   <!--Se utiliza solo un h1-->
@@ -49,10 +54,16 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
 
 
 <!-- ##### Palpable content -->
-  <!-- Content is palpable when it's neither empty or hidden; it is content that is rendered and is substantive. Elements whose model is flow content or phrasing content should have at least one node which is palpable. -->
+  <!-- Content is palpable when it's neither empty or hidden; it is content that is rendered and is substantive. Elements whose model is flow content 
+    or phrasing content should have at least one node which is palpable. -->
 
 
-  
+  <!-- "Sectioning roots -->
+<!-- A sectioning root is an HTML element that can have its own outline, but the sections and headings inside it does not contribute to the outline of its ancestor. -->
+ <!-- Beside <body> which is the logical sectioning root of a document, -->
+   <!-- these are often elements that introduce external content to the page: <blockquote>, <details>, <fieldset>, <figure> and <td>." -->
+
+
   <!--  cite .- reference to a creative work --Phrasing content  -->
   <!-- blockquote .- bloque de cita  ---only flow content-->
   <blockquote>
@@ -596,6 +607,10 @@ body {
       <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
   </div>
   
+
+
+
+
 
 
 </body>
