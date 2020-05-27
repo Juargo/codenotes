@@ -58,15 +58,15 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   </hgroup>
 
 
-<!-- ##### Palpable content -->
+  <!-- ##### Palpable content -->
   <!-- Content is palpable when it's neither empty or hidden; it is content that is rendered and is substantive. Elements whose model is flow content 
     or phrasing content should have at least one node which is palpable. -->
 
 
   <!-- "Sectioning roots -->
-<!-- A sectioning root is an HTML element that can have its own outline, but the sections and headings inside it does not contribute to the outline of its ancestor. -->
- <!-- Beside <body> which is the logical sectioning root of a document, -->
-   <!-- these are often elements that introduce external content to the page: <blockquote>, <details>, <fieldset>, <figure> and <td>." -->
+  <!-- A sectioning root is an HTML element that can have its own outline, but the sections and headings inside it does not contribute to the outline of its ancestor. -->
+  <!-- Beside <body> which is the logical sectioning root of a document, -->
+  <!-- these are often elements that introduce external content to the page: <blockquote>, <details>, <fieldset>, <figure> and <td>." -->
 
 
 
@@ -76,10 +76,10 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
     Use <cite> to mark up the name of a work, such as a book, play, or song.
     Use <dfn> to mark up the defining instance of a term. -->
 
-      <!-- b, i, u. Elements like this, which only affect presentation and not semantics, are known as  -->
-      <!-- presentational elements and should no longer be used, because as we've seen before, semantics is so important to accessibility, SEO, etc. -->
+  <!-- b, i, u. Elements like this, which only affect presentation and not semantics, are known as  -->
+  <!-- presentational elements and should no longer be used, because as we've seen before, semantics is so important to accessibility, SEO, etc. -->
 
-      <!-- i> se utiliza para transmitir un significado tradicionalmente transmitido por cursiva: palabras extranjeras, designación taxonómica, términos técnicos, un pensamiento ...
+  <!-- i> se utiliza para transmitir un significado tradicionalmente transmitido por cursiva: palabras extranjeras, designación taxonómica, términos técnicos, un pensamiento ...
       <b> se utiliza para transmitir un significado transmitido tradicionalmente en negrita: palabras clave, nombres de productos, oración principal ...
       <u> se utiliza para transmitir un significado tradicionalmente transmitido por subrayado: nombre correcto, falta de ortografía ... -->
 
@@ -87,26 +87,30 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   <!-- <b></b> sirve para enfatizar en casos alternativos a em, strong. The b element should be used as a last resort when no other element is more appropriate. In particular, 
           headings should use the h1 to h6 elements, stress emphasis should use the em element, importance should be denoted with the strong element, and text marked or highlighted 
           should use the mark element. -->
-          <p><b>Palabras</b> que se quieren resaltar pero no tienen demasiada importancia</p>
+  <p><b>Palabras</b> que se quieren resaltar pero no tienen demasiada importancia</p>
 
-          <!-- em --emphasis --Phrasing Content, Palpable Content -->
-          <p>Get out of bed <em>now</em>!</p>
-        
-          <!-- i .- represents a range of text that is set off from the normal text  --phrasing content, palpable content. -->
-          <p>I looked at it and thought <i>This can't be real!</i></p>
-        
-          <!-- dfn .- definition --Phrasing content -->
-          <!-- El id se puede referenciar -->
-          <p><dfn id="html-def">HTML</dfn> is the standard markup language for creating web pages.</p>
-          <p>Learn <a href="#html-def">HTML</a> now.</p>
-        
-          <!-- mark .- marca -- phrasing content, palpable content. -->
-          <p>Several species of <mark>salamander</mark> inhabit the temperate rainforest of the Pacific Northwest.</p>
-        
-        <!-- strong .-  phrasing content, palpable content. -->
-          <p>... the most important rule, the rule you can never forget, no matter how much he cries, no matter how much he begs: <strong>never feed him after midnight</strong>.</p>
+  <!-- i .- represents a range of text that is set off from the normal text  --phrasing content, palpable content. -->
+  <p>I looked at it and thought <i>This can't be real!</i></p>
 
 
+
+  <!-- em --emphasis --Phrasing Content, Palpable Content -->
+  <p>Get out of bed <em>now</em>!</p>
+
+  <!-- mark .- marca -- phrasing content, palpable content. -->
+  <p>Several species of <mark>salamander</mark> inhabit the temperate rainforest of the Pacific Northwest.</p>
+
+  <!-- strong .-  phrasing content, palpable content. -->
+  <p>... the most important rule, the rule you can never forget, no matter how much he cries, no matter how much he
+    begs: <strong>never feed him after midnight</strong>.</p>
+
+
+
+
+  <!-- dfn .- definition --Phrasing content -->
+  <!-- El id se puede referenciar -->
+  <p><dfn id="html-def">HTML</dfn> is the standard markup language for creating web pages.</p>
+  <p>Learn <a href="#html-def">HTML</a> now.</p>
 
 
   <!--  cite .- reference to a creative work --Phrasing content  -->
@@ -116,7 +120,8 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   </blockquote>
 
   <!-- indica que el texto adjunto es una cita corta en línea -->
-  <p>When Dave asks HAL to open the pod bay door, HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I'm sorry, Dave. I'm afraid I can't do that.</q></p>
+  <p>When Dave asks HAL to open the pod bay door, HAL answers: <q
+      cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I'm sorry, Dave. I'm afraid I can't do that.</q></p>
 
 
   <!-- abbr .- Abreviatura -- Phrasing content -->
@@ -152,10 +157,28 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   <p>The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the
     array.</p>
 
-
-
   <!-- var .- represents the name of a variable in a mathematical expression or a programming contex --phrasing content, palpable content. -->
-  <p>The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where <var>l</var> represents the length, <var>w</var> the width and <var>h</var> the height of the box.</p>
+  <p>The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where <var>l</var> represents the length,
+    <var>w</var> the width and <var>h</var> the height of the box.</p>
+
+  <!-- pre .- Preformate text. Permite mostrar texto tal como uno lo escribe  -->
+  <p>Using CSS to change the font color is easy.</p>
+  <pre>
+body {
+  color: red;
+}
+</pre>
+
+  <!-- kbd .-Keyboard Input element --phrasing content, palpable content -->
+  <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+
+ <!-- samp .- se usa para encerrar texto en línea que representa la salida de muestra (o citada) de un programa de computadora --phrasing content, palpable content. -->
+ <p>I was trying to boot my computer, but I got this hilarious message:</p>
+
+ <p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
+
+
+
 
 
 
@@ -227,11 +250,6 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   </ins>
 
 
-
-
-
-  <!-- kbd .-Keyboard Input element --phrasing content, palpable content -->
-  <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
 
 
 
@@ -311,13 +329,13 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   <embed type="video/webm" src="/media/examples/flower.mp4" width="250" height="200">
 
 
-video .-
-<video controls>
-  <source src="myVideo.mp4" type="video/mp4">
-  <source src="myVideo.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is
-     a <a href="myVideo.mp4">link to the video</a> instead.</p>
-</video>
+  video .-
+  <video controls>
+    <source src="myVideo.mp4" type="video/mp4">
+    <source src="myVideo.webm" type="video/webm">
+    <p>Your browser doesn't support HTML5 video. Here is
+      a <a href="myVideo.mp4">link to the video</a> instead.</p>
+  </video>
 
 
 
@@ -503,58 +521,48 @@ video .-
 
 
 
-  <!-- pre .- Preformate text. Permite mostrar texto tal como uno lo escribe  -->
-  <p>Using CSS to change the font color is easy.</p>
-  <pre>
-body {
-  color: red;
-}
-</pre>
 
 
 
 
 
-<!-- progress .- -- phrasing content, labelable content, palpable content. -->
-<progress id="file" max="100" value="70"> 70% </progress>
+
+  <!-- progress .- -- phrasing content, labelable content, palpable content. -->
+  <progress id="file" max="100" value="70"> 70% </progress>
 
 
 
-<!-- ruby .-Ruby annotations are for showing pronunciation of East Asian characters. --phrasing content, palpable content. -->
-<ruby>
-  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
+  <!-- ruby .-Ruby annotations are for showing pronunciation of East Asian characters. --phrasing content, palpable content. -->
+  <ruby>
+    明日 <rp>(</rp>
+    <rt>Ashita</rt>
+    <rp>)</rp>
   </ruby>
 
-  
-<!-- s .- Use el <s>elemento para representar cosas que ya no son relevantes o que ya no son precisas. Sin embargo,  -->
+
+  <!-- s .- Use el <s>elemento para representar cosas que ya no son relevantes o que ya no son precisas. Sin embargo,  -->
   <!-- <s>no es apropiado al indicar ediciones de documentos; para eso, use los elementos <del>y <ins>, según corresponda. -->
-    <!-- phrasing content -->
-    <p><s>There will be a few tickets available at the box office tonight.</s></p>
+  <!-- phrasing content -->
+  <p><s>There will be a few tickets available at the box office tonight.</s></p>
 
 
 
 
 
 
-    <!-- samp .- se usa para encerrar texto en línea que representa la salida de muestra (o citada) de un programa de computadora --phrasing content, palpable content. -->
-    <p>I was trying to boot my computer, but I got this hilarious message:</p>
+ 
+  <!-- small .- phrasing content -->
+  <p>MDN Web Docs is a learning platform for Web technologies and the software that powers the Web.</p>
 
-    <p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
-    
+  <hr>
 
-
-<!-- small .- phrasing content -->
-    <p>MDN Web Docs is a learning platform for Web technologies and the software that powers the Web.</p>
-
-    <hr>
-    
-    <p><small>The content is licensed under a Creative Commons Attribution-ShareAlike 2.5 Generic License.</small></p>
-    
+  <p><small>The content is licensed under a Creative Commons Attribution-ShareAlike 2.5 Generic License.</small></p>
 
 
-<!-- span .- es un contenedor genérico en línea para redactar contenido, que no representa nada inherentemente. Se puede usar para agrupar elementos con fines de estilo  -->
-<!-- (usando los atributos classo id), o porque comparten valores de atributos, como lang. Debe usarse solo cuando ningún otro elemento semántico sea apropiado. <span>es  -->
-<!-- muy parecido a un <div>elemento, pero <div>es un elemento de nivel de bloque mientras que a <span>es un elemento en línea . -->
+
+  <!-- span .- es un contenedor genérico en línea para redactar contenido, que no representa nada inherentemente. Se puede usar para agrupar elementos con fines de estilo  -->
+  <!-- (usando los atributos classo id), o porque comparten valores de atributos, como lang. Debe usarse solo cuando ningún otro elemento semántico sea apropiado. <span>es  -->
+  <!-- muy parecido a un <div>elemento, pero <div>es un elemento de nivel de bloque mientras que a <span>es un elemento en línea . -->
   <!-- phrasing content. -->
   <p>Gradually add the <span class="ingredient">olive oil</span> while running the blender slowly.</p>
 
@@ -564,51 +572,52 @@ body {
   <!-- sub .- subindice -- phrasing content, palpable content. -->
   <p>Almost every developer's favorite molecule is
     C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."</p>
-    
-<!-- sup .- Superscript element -- phrasing content, palpable content. -->
-    <p><var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var></p>
+
+  <!-- sup .- Superscript element -- phrasing content, palpable content. -->
+  <p><var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var></p>
 
 
-<!-- svg .- Dibujar --Container element, Structural element -->
-    <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
-      <circle cx="50" cy="50" r="40" />
-      <circle cx="150" cy="50" r="4" />
-    
-      <svg viewBox="0 0 10 10" x="200" width="100">
-        <circle cx="5" cy="5" r="4" />
-      </svg>
+  <!-- svg .- Dibujar --Container element, Structural element -->
+  <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
+    <circle cx="50" cy="50" r="40" />
+    <circle cx="150" cy="50" r="4" />
+
+    <svg viewBox="0 0 10 10" x="200" width="100">
+      <circle cx="5" cy="5" r="4" />
     </svg>
+  </svg>
 
 
 
-    <!-- template .- Crear un template de una sección de código html como una tabla para luego agregar vía javascript contenido -->
-    <!-- ---Metadata content, flow content, phrasing content, script-supporting element -->
-    <!-- no se muestra en pantalla hasta que vía javascript se agregen datos -->
-    <table id="producttable">
-      <thead>
-        <tr>
-          <td>UPC_Code</td>
-          <td>Product_Name</td>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- existing data could optionally be included here -->
-      </tbody>
-    </table>
-    
-    <template id="productrow">
+  <!-- template .- Crear un template de una sección de código html como una tabla para luego agregar vía javascript contenido -->
+  <!-- ---Metadata content, flow content, phrasing content, script-supporting element -->
+  <!-- no se muestra en pantalla hasta que vía javascript se agregen datos -->
+  <table id="producttable">
+    <thead>
       <tr>
-        <td class="record"></td>
-        <td></td>
+        <td>UPC_Code</td>
+        <td>Product_Name</td>
       </tr>
-    </template>
-    
-    
+    </thead>
+    <tbody>
+      <!-- existing data could optionally be included here -->
+    </tbody>
+  </table>
+
+  <template id="productrow">
+    <tr>
+      <td class="record"></td>
+      <td></td>
+    </tr>
+  </template>
 
 
 
-<!-- time .- Se agrega información del tiempo en formato máquina para mejorar el search engine -- phrasing content, palpable content. -->
-    <p>The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde Park.</p>
+
+
+  <!-- time .- Se agrega información del tiempo en formato máquina para mejorar el search engine -- phrasing content, palpable content. -->
+  <p>The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde
+    Park.</p>
 
 
 
@@ -618,12 +627,12 @@ body {
 
   <!-- wbr .- represents a word break opportunity. Determinar donde se quiebra un parrafo al disminuir el tamaño del browser -- phrasing content. -->
 
-    <div id="example-paragraphs">
-      <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
-      <p>Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz</p>
-      <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+  <div id="example-paragraphs">
+    <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
+    <p>Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz</p>
+    <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
   </div>
-  
+
 
 
 
