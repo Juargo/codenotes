@@ -38,10 +38,21 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
 </head>
 
 <body>
-  <a href='http://www.example.com' title='Isn&#39;t this fun?'>A link to my example.</a>
+ <!-- ##### Palpable content -->
+  <!-- Content is palpable when it's neither empty or hidden; it is content that is rendered and is substantive. Elements whose model is flow content 
+    or phrasing content should have at least one node which is palpable. -->
+
+<!-- "Sectioning roots -->
+  <!-- A sectioning root is an HTML element that can have its own outline, but the sections and headings inside it does not contribute to the outline of its ancestor. -->
+  <!-- Beside <body> which is the logical sectioning root of a document, -->
+  <!-- these are often elements that introduce external content to the page: <blockquote>, <details>, <fieldset>, <figure> and <td>." -->
+
+<!-- ##### Phrasing content -->
+    <!-- Phrasing content defines the text and the mark-up it contains. Runs of phrasing content make up paragraphs.    -->
 
 
-  <!-- ### heading content ####-->
+
+    <!-- ### heading content ####-->
   <h1>Beetles</h1>
   <!--Se utiliza solo un h1-->
   <h2>External morphology</h2>
@@ -51,25 +62,208 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   <h4>Prothorax</h4>
   <h4>Pterothorax</h4>
 
-  <!-- hgroup .- ulti-level heading -- heading content, palpable content -->
-  <hgroup>
-    <h1>Calculus I</h1>
-    <h2>Fundamentals</h2>
-  </hgroup>
+
+ <!-- Phrasing content. -->
+ <address>
+  Lola the cat is at Latitude: 51.47852 Longitude: -0.1449519
+</address>
+
+ 
+<!--  Sectioning content,Palpable content.
+          Articulo tipo blog-->
+          <article vocab="http://schema.org/" typeof="Article">
+            <header>
+              <h2 property="name">The Very First Rule of Life</h2>
+              <p property="datePublished">
+                <time datetime="2018-02-07">3 days ago</time>
+              </p>
+            </header>
+            <div property="articleBody">
+              <p>
+                Always check that your computer is plugged in before you complain it
+                isn’t working.
+              </p>
+            </div>
+            <footer>
+              <a href="?comments=1">Show comments...</a>
+            </footer>
+          </article>
+
+  <!-- Cuando usar article,section y div -->
+  <!-- article y section -->
+  <!-- - si requiere usar h1 h2  -->
+  <!-- - si el contenido tiene sentido entre ellos -->
+
+  <!-- article -->
+  <!-- - Si el contenido tiene sentido por si solo y puede ser sacado y puesto en otro lado y sigue teniendo sentido -->
+
+  <!-- Flow content, Sectioning content, Palpable content.
+          Assistive Technology may convey the semantics of the aside to users. This information can provide a hint to users as to the type of content. 
+          For example the role of the element, which in this case is "complementary", can be announced by screen reader software when a user navigates to an aside element. 
+          User Agents may also provide methods to navigate to aside elements.
+
+          It’s not appropriate to use the aside element just for parentheticals, since those are part of the main flow of the document. -->
+
+          <aside>
+            <h2>Switzerland</h2>
+            <p>
+              Switzerland, a land-locked country in the middle of geographic Europe,
+              has not joined the geopolitical European Union, though it is a signatory
+              to a number of European treaties.
+            </p>
+          </aside>
+        
+          <!-- nav .- Navegacion -- sectioning content, palpable content -->
+          <nav class="menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+
+          
 
 
-  <!-- ##### Palpable content -->
-  <!-- Content is palpable when it's neither empty or hidden; it is content that is rendered and is substantive. Elements whose model is flow content 
-    or phrasing content should have at least one node which is palpable. -->
+          <main>
+            <h1>Apples</h1>
+            <p>The apple is the pomaceous fruit of the apple tree.</p>
+            
+            <article>
+              <h2>Red Delicious</h2>
+              <p>These bright red apples are the most common found in many
+              supermarkets.</p>
+              <p>... </p>
+              <p>... </p>
+            </article>
+          
+            <article>
+              <h2>Granny Smith</h2>
+              <p>These juicy, green apples make a great filling for
+              apple pies.</p>
+              <p>... </p>
+              <p>... </p>
+            </article>
+          </main>
+
+          
+          <h1>How to Fish</h1>
+<section>
+    <h2>Introduction</h2>
+    <p>People have been catching fish for food since before recorded history…</p>
+</section>
+
+<section>
+    <h2>Equipment</h2>
+    <p>The first thing you’ll need is a fishing rod or pole that you find comfortable and is strong enough for the kind of fish you’re expecting to land…</p>
+</section>
+
+<!-- elementos extras -->
+  <!-- span es a nivel de línea -->
+  <!-- div es a nivel de bloque -->
+  <!-- span .- es un contenedor genérico en línea para redactar contenido, que no representa nada inherentemente. Se puede usar para agrupar elementos con fines de estilo  -->
+  <!-- (usando los atributos classo id), o porque comparten valores de atributos, como lang. Debe usarse solo cuando ningún otro elemento semántico sea apropiado. <span>es  -->
+  <!-- muy parecido a un <div>elemento, pero <div>es un elemento de nivel de bloque mientras que a <span>es un elemento en línea . -->
+  <!-- phrasing content. -->
+  <p>Gradually add the <span class="ingredient">olive oil</span> while running the blender slowly.</p>
 
 
-  <!-- "Sectioning roots -->
-  <!-- A sectioning root is an HTML element that can have its own outline, but the sections and headings inside it does not contribute to the outline of its ancestor. -->
-  <!-- Beside <body> which is the logical sectioning root of a document, -->
-  <!-- these are often elements that introduce external content to the page: <blockquote>, <details>, <fieldset>, <figure> and <td>." -->
+
+<!-- #########################################################################Text content################################################################################################################################################# -->
+
+  <!-- dl --Description list --Palpable Content -->
+  <!-- dt --Termino -->
+  <!-- dd --Description -->
+  <dl>
+    <dt>Beast of Bodmin</dt>
+    <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+    <dt>Morgawr</dt>
+    <dd>A sea serpent.</dd>
+
+    <dt>Owlman</dt>
+    <dd>A giant owl-like creature.</dd>
+  </dl>
+
+
+  <!--  cite .- reference to a creative work --Phrasing content  -->
+  <!-- blockquote .- bloque de cita  ---only flow content-->
+  <blockquote>
+    <p>Who is your favorite doctor (in <cite>Doctor Who</cite>)?</p>
+  </blockquote>
+
+
+<!-- figure .- Figura con título opcional --palpable content. -->
+  <!-- figcaption .-titulo -->
+  <figure>
+    <img src="/media/examples/elephant-660-480.jpg" alt="Elephant at sunset">
+    <figcaption>An elephant at sunset</figcaption>
+  </figure>
+
+
+  <!-- hr .- thematic break between paragraph-level elements -->
+  <p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+  <hr>
+  <p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+
+
+  <!-- ol .- Order list   -->
+  <ol>
+    <li>Mix flour, baking powder, sugar, and salt.</li>
+    <li>In another bowl, mix eggs, milk, and oil.</li>
+    <li>Stir both mixtures together.</li>
+    <li>Fill muffin tray 3/4 full.</li>
+    <li>Bake for 20 minutes.</li>
+  </ol>
+
+  <!-- pre .- Preformate text. Permite mostrar texto tal como uno lo escribe  -->
+  <p>Using CSS to change the font color is easy.</p>
+  <pre>
+body {
+  color: red;
+}
+</pre>
 
 
 
+
+
+
+<!-- $$$###################################################################################Inline text semantics######################################################################## -->
+
+
+
+<a href='http://www.example.com' title='Isn&#39;t this fun?'>A link to my example.</a>
+
+  <!-- flow content,Phrasing content, Interactive content, Palpable content. -->
+  <a href="chapter1.html" rev="toc" rel="next">chapter 1</a>
+  <a href="chapter2.html" rev="toc">chapter 2</a>
+
+
+
+
+<!-- code .- The <code> element by itself only represents a single phrase of code or line of code --Phrasing content -->
+  <p>The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the
+    array.</p>
+
+  <!-- var .- represents the name of a variable in a mathematical expression or a programming contex --phrasing content, palpable content. -->
+  <p>The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where <var>l</var> represents the length,
+    <var>w</var> the width and <var>h</var> the height of the box.</p>
+
+
+
+  <!-- kbd .-Keyboard Input element --phrasing content, palpable content -->
+  <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+
+  <!-- samp .- se usa para encerrar texto en línea que representa la salida de muestra (o citada) de un programa de computadora --phrasing content, palpable content. -->
+  <p>I was trying to boot my computer, but I got this hilarious message:</p>
+
+  <p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
+
+
+
+
+  
   <!-- Use <em> to indicate stress emphasis. si se quiere un texto en italic usar <i> o <span>+css
     Use <strong> to indicate importance, seriousness, or urgency. si se quiere negrita usar <b> o <span>+css
     Use <mark> to indicate relevance.
@@ -113,24 +307,15 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
   <p>Learn <a href="#html-def">HTML</a> now.</p>
 
 
-  <!--  cite .- reference to a creative work --Phrasing content  -->
-  <!-- blockquote .- bloque de cita  ---only flow content-->
-  <blockquote>
-    <p>Who is your favorite doctor (in <cite>Doctor Who</cite>)?</p>
-  </blockquote>
 
-  <!-- indica que el texto adjunto es una cita corta en línea -->
+
+  <!-- q  indica que el texto adjunto es una cita corta en línea -->
   <p>When Dave asks HAL to open the pod bay door, HAL answers: <q
       cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I'm sorry, Dave. I'm afraid I can't do that.</q></p>
 
 
   <!-- abbr .- Abreviatura -- Phrasing content -->
   <abbr title="World Wide Web Consortium">W3C</abbr>
-
-
-
-
-
 
 
 
@@ -151,41 +336,30 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
 
 
 
-
-
-  <!-- code .- The <code> element by itself only represents a single phrase of code or line of code --Phrasing content -->
-  <p>The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the
-    array.</p>
-
-  <!-- var .- represents the name of a variable in a mathematical expression or a programming contex --phrasing content, palpable content. -->
-  <p>The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where <var>l</var> represents the length,
-    <var>w</var> the width and <var>h</var> the height of the box.</p>
-
-  <!-- pre .- Preformate text. Permite mostrar texto tal como uno lo escribe  -->
-  <p>Using CSS to change the font color is easy.</p>
-  <pre>
-body {
-  color: red;
-}
-</pre>
-
-  <!-- kbd .-Keyboard Input element --phrasing content, palpable content -->
-  <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
-
-  <!-- samp .- se usa para encerrar texto en línea que representa la salida de muestra (o citada) de un programa de computadora --phrasing content, palpable content. -->
-  <p>I was trying to boot my computer, but I got this hilarious message:</p>
-
-  <p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
-
-
-
-
-
-
   <!-- data .- se utiliza para agregar una traducción legible por máquina de un contenido determinado. -->
   <h1 itemscope>
     <data itemprop="product-id" value="9678AOU879">The Instigator 2000</data>
   </h1>
+
+
+
+
+  <!-- time .- Se agrega información del tiempo en formato máquina para mejorar el search engine -- phrasing content, palpable content. -->
+  <p>The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde
+    Park.</p>
+
+
+
+  <!-- wbr .- represents a word break opportunity. Determinar donde se quiebra un parrafo al disminuir el tamaño del browser -- phrasing content. -->
+
+  <div id="example-paragraphs">
+    <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
+    <p>Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz</p>
+    <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+  </div>
+
+
+<!-- ###################################################################################################################################################################################### -->
 
 
 
@@ -215,28 +389,6 @@ body {
       </select>
     </label>
   </datalist>
-
-
-
-
-
-  <!-- dl --Description list --Palpable Content -->
-  <!-- dt --Termino -->
-  <!-- dd --Description -->
-  <p>Cryptids of Cornwall:</p>
-  <dl>
-    <dt>Beast of Bodmin</dt>
-    <dd>A large feline inhabiting Bodmin Moor.</dd>
-
-    <dt>Morgawr</dt>
-    <dd>A sea serpent.</dd>
-
-    <dt>Owlman</dt>
-    <dd>A giant owl-like creature.</dd>
-  </dl>
-
-
-
 
 
   <!-- del .- deleted element --Phrasing content -->
@@ -291,35 +443,6 @@ body {
 
 
 
-
-
-  <!-- ###input -->
-
-  <!-- figure .- Figura con título opcional --palpable content. -->
-  <!-- figcaption .-titulo -->
-  <figure>
-    <img src="/media/examples/elephant-660-480.jpg" alt="Elephant at sunset">
-    <figcaption>An elephant at sunset</figcaption>
-  </figure>
-
-
-
-
-
-
-  <!-- hr .- thematic break between paragraph-level elements -->
-  <p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
-
-  <hr>
-
-  <p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
-
-
-
-
-
-
-
   <!-- ###### Embedded content ##### -->
   <!-- Embedded content imports another resource or inserts content from another mark-up language or namespace into the document. -->
   <!-- ##Canvas## -->
@@ -329,35 +452,13 @@ body {
   <embed type="video/webm" src="/media/examples/flower.mp4" width="250" height="200">
 
 
-  video .-
+  <!-- video .- -->
   <video controls>
     <source src="myVideo.mp4" type="video/mp4">
     <source src="myVideo.webm" type="video/webm">
     <p>Your browser doesn't support HTML5 video. Here is
       a <a href="myVideo.mp4">link to the video</a> instead.</p>
   </video>
-
-
-
-
-  <!-- flow content,Phrasing content, Interactive content, Palpable content. -->
-  <a href="chapter1.html" rev="toc" rel="next">chapter 1</a>
-  <a href="chapter2.html" rev="toc">chapter 2</a>
-
-
-
-
-
-
-  <!-- flow content,Phrasing content. -->
-  <address>
-    <!--Contact information -->
-    Lola the cat is at Latitude: 51.47852 Longitude: -0.1449519
-  </address>
-
-
-
-
 
 
 
@@ -379,90 +480,6 @@ body {
   <!-- img .- imagen -- phrasing content, embedded content, palpable content -->
   <img src="/files/16864/clock-demo-200px.png" alt="Clock" srcset="/files/16864/clock-demo-200px.png 200w,
           /files/16797/clock-demo-400px.png 400w" sizes="(max-width: 600px) 200px, 50vw">
-
-
-
-
-
-  <!-- Flow content, Sectioning content,Palpable content.
-          Articulo tipo blog-->
-  <article vocab="http://schema.org/" typeof="Article">
-    <header>
-      <h2 property="name">The Very First Rule of Life</h2>
-      <p property="datePublished">
-        <time datetime="2018-02-07">3 days ago</time>
-      </p>
-    </header>
-    <div property="articleBody">
-      <p>
-        Always check that your computer is plugged in before you complain it
-        isn’t working.
-      </p>
-    </div>
-    <footer>
-      <a href="?comments=1">Show comments...</a>
-    </footer>
-  </article>
-
-
-  <!-- div .- division --only Flow Content -->
-  <div>
-    <p>Any kind of content here. Such as
-      &lt;p&gt;, &lt;table&gt;. You name it!</p>
-  </div>
-
-  <!-- Cuando usar article,section y div -->
-  <!-- article y section -->
-  <!-- - si requiere usar h1 h2  -->
-  <!-- - si el contenido tiene sentido entre ellos -->
-
-  <!-- article -->
-  <!-- - Si el contenido tiene sentido por si solo y puede ser sacado y puesto en otro lado y sigue teniendo sentido -->
-
-  <!-- Flow content, Sectioning content, Palpable content.
-          Assistive Technology may convey the semantics of the aside to users. This information can provide a hint to users as to the type of content. 
-          For example the role of the element, which in this case is "complementary", can be announced by screen reader software when a user navigates to an aside element. 
-          User Agents may also provide methods to navigate to aside elements.
-
-          It’s not appropriate to use the aside element just for parentheticals, since those are part of the main flow of the document. -->
-
-  <aside>
-    <h2>Switzerland</h2>
-    <p>
-      Switzerland, a land-locked country in the middle of geographic Europe,
-      has not joined the geopolitical European Union, though it is a signatory
-      to a number of European treaties.
-    </p>
-  </aside>
-
-  <!-- nav .- Navegacion -- sectioning content, palpable content -->
-  <nav class="menu">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-
-
-
-  <!-- <address>	The HTML <address> element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.
-    <article>	The HTML <article> element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication).
-    <aside>	The HTML <aside> element represents a portion of a document whose content is only indirectly related to the document's main content.
-    <footer>	The HTML <footer> element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.
-    <header>	The HTML <header> element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
-    <h1>, <h2>, <h3>, <h4>, <h5>, <h6>	The HTML <h1>–<h6> elements represent six levels of section headings. <h1> is the highest section level and <h6> is the lowest.
-    <hgroup>	The HTML <hgroup> element represents a multi-level heading for a section of a document. It groups a set of <h1>–<h6> elements.
-    <main>	The HTML <main> element represents the dominant content of the <body> of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
-    <nav>	The HTML <nav> element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.
-    <section>	The HTML <section> element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document. -->
-
-
-
-
-
-
-
 
 
 
@@ -510,18 +527,7 @@ body {
 
 
 
-  <!-- ol .- Order list -- -->
-  <ol>
-    <li>Mix flour, baking powder, sugar, and salt.</li>
-    <li>In another bowl, mix eggs, milk, and oil.</li>
-    <li>Stir both mixtures together.</li>
-    <li>Fill muffin tray 3/4 full.</li>
-    <li>Bake for 20 minutes.</li>
-  </ol>
-
-
-
-
+>
   <!-- output .- contenedor de un resultado -- phrasing content, listed, labelable, resettable form-associated element, palpable content. -->
   <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
     <input type="range" id="b" name="b" value="50" /> +
@@ -540,12 +546,6 @@ body {
     <source srcset="/media/examples/surfer-240-200.jpg" media="(min-width: 800px)">
     <img src="/media/examples/painted-hand-298-332.jpg" />
   </picture>
-
-
-
-
-
-
 
 
 
@@ -569,11 +569,7 @@ body {
 
 
 
-
-
-
-
-  <!-- small .- phrasing content -->
+ <!-- small .- phrasing content -->
   <p>MDN Web Docs is a learning platform for Web technologies and the software that powers the Web.</p>
 
   <hr>
@@ -581,16 +577,7 @@ body {
   <p><small>The content is licensed under a Creative Commons Attribution-ShareAlike 2.5 Generic License.</small></p>
 
 
-  <!-- elementos extras -->
-  <!-- span es a nivel de línea -->
-  <!-- div es a nivel de bloque -->
-  <!-- span .- es un contenedor genérico en línea para redactar contenido, que no representa nada inherentemente. Se puede usar para agrupar elementos con fines de estilo  -->
-  <!-- (usando los atributos classo id), o porque comparten valores de atributos, como lang. Debe usarse solo cuando ningún otro elemento semántico sea apropiado. <span>es  -->
-  <!-- muy parecido a un <div>elemento, pero <div>es un elemento de nivel de bloque mientras que a <span>es un elemento en línea . -->
-  <!-- phrasing content. -->
-  <p>Gradually add the <span class="ingredient">olive oil</span> while running the blender slowly.</p>
-
-
+  
 
 
   <!-- sub .- subindice -- phrasing content, palpable content. -->
@@ -639,23 +626,6 @@ body {
 
 
 
-  <!-- time .- Se agrega información del tiempo en formato máquina para mejorar el search engine -- phrasing content, palpable content. -->
-  <p>The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde
-    Park.</p>
-
-
-
-
-
-
-
-  <!-- wbr .- represents a word break opportunity. Determinar donde se quiebra un parrafo al disminuir el tamaño del browser -- phrasing content. -->
-
-  <div id="example-paragraphs">
-    <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
-    <p>Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz</p>
-    <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
-  </div>
 
 
 
