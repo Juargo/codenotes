@@ -16,6 +16,7 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
 <!-- Los motores de búsqueda que indexan su página consideran el contenido de los encabezados como palabras clave importantes para influir
  en los rankings de búsqueda de la página. Sin encabezados, su página funcionará mal en términos de SEO (Search Engine Optimization). -->
 
+ <!-- A void element is an element whose content model never allows it to have contents under any circumstances. Void elements can have attributes. -->
 <html>
 
 <head>
@@ -192,6 +193,10 @@ Including the DOCTYPE in a document ensures that the browser makes a best-effort
     <p>Who is your favorite doctor (in <cite>Doctor Who</cite>)?</p>
   </blockquote>
 
+ <!-- q  indica que el texto adjunto es una cita corta en línea -->
+ <p>When Dave asks HAL to open the pod bay door, HAL answers: <q
+  cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I'm sorry, Dave. I'm afraid I can't do that.</q></p>
+
 
 <!-- figure .- Figura con título opcional --palpable content. -->
   <!-- figcaption .-titulo -->
@@ -309,11 +314,7 @@ body {
 
 
 
-  <!-- q  indica que el texto adjunto es una cita corta en línea -->
-  <p>When Dave asks HAL to open the pod bay door, HAL answers: <q
-      cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I'm sorry, Dave. I'm afraid I can't do that.</q></p>
-
-
+ 
   <!-- abbr .- Abreviatura -- Phrasing content -->
   <abbr title="World Wide Web Consortium">W3C</abbr>
 
@@ -631,7 +632,7 @@ body {
 
 
 
-
+<audio autoplay loop src="Zymbel_The_Real_Horst-1113884951.mp3" type="audio/mpeg"></audio>
 
 </body>
 
