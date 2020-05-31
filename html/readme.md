@@ -1,5 +1,7 @@
 html only purpose is describing conent
+El único proposito de html es describir contenido
 we do not choose html tagas bases on how they look
+No se debe escoger tags/elementos por como se ven. Para eso se usa CSS
 
 <article> Es una sección cuyo contenido puede funcionar por si solo. Es decir que se puede sacar y la web seguirá teniendo sentido
 <section> es para agrupar contenido
