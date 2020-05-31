@@ -20,8 +20,77 @@ section
 footer
 aside
 address
+a
+
 
 div nivel bloque
 span nivel línea
 
+em
+strong
+mark
+b
+i
+u
 
+dl dt dd
+ul
+ol
+
+blockquote
+cite
+q
+
+code
+var
+kbd
+samp
+
+figure
+figcaption
+img
+canvas
+svg
+object
+iframe
+audio
+video
+embed
+map area
+picture
+
+hr
+br
+wbr
+
+p
+pre
+small
+
+dfn
+abbr
+bdo bdi
+ruby
+sup
+sub
+
+data
+time
+
+form
+button
+datalist
+label
+fielset
+output
+table
+template
+
+del 
+ins
+details
+math
+meter
+noscript
+progress
+s
