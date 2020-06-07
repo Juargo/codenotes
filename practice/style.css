@@ -1,0 +1,33 @@
+@import "../css/normalize-reset/normalize.css";
+@import "../css/normalize-reset/reset.local.css";
+
+@font-face {
+    font-family: Roboto;
+    src: url(../css/fonts/RobotoCondensed-Regular.ttf);
+  }
+
+*{background-color: rgba(255, 0,0, .2);}
+* *{background-color: rgba(0, 255,0, .2);}
+* * *{background-color: rgba(0,0,255, .2);}
+* * * *{background-color: rgba(255, 0, 255, .2);}
+* * * * *{background-color: rgba(0,255, 255, .2);}
+* * * * * *{background-color: rgba(255,255, 0, .2);}
+* * * * * * *{background-color: rgba(255,0,0, .2);}
+* * * * * * * *{background-color: rgba(0, 255,0, .2);}
+* * * * * * * * *{background-color: rgba(0,0,255, .2);}
+
+body{
+    font-family: Roboto;
+}
+
+#header{
+    text-align: center;
+    padding: 80px;
+    background: #1abc9c;
+    color: white;
+}
+
+#header h1{
+    font-size: 50px;
+    margin-bottom: 0.3em;
+}
